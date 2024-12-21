@@ -1,0 +1,143 @@
+:root {
+  --primary-yellow: hsl(47, 88%, 63%);
+  --primary-white: hsl(0, 0%, 100%);
+  --primary-gray-500: hsl(0, 0%, 42%);
+  --primary-gray-900: hsl(0, 0%, 7%);
+
+  --ff-primary: "Figtree", sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 800;
+
+  font-size: 16px;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+span,
+time {
+  max-width: 100%;
+  display: block;
+}
+html,
+body {
+  height: 100%;
+}
+
+/* Utility Classes */
+
+.tx-body {
+  font-family: var(--ff-primary);
+}
+.tx-regular {
+  font-weight: var(--fw-regular);
+}
+.tx-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fluid-14 {
+  font-size: clamp(0.75rem, 0.706rem + 0.188vw, 0.875rem);
+}
+
+.fluid-16 {
+  font-size: clamp(0.875rem, 0.831rem + 0.188vw, 1rem);
+}
+.fluid-24 {
+  font-size: clamp(1.25rem, 1.162rem + 0.376vw, 1.5rem);
+}
+
+.bg-body {
+  background-color: var(--primary-yellow);
+}
+.bg-card {
+  background-color: var(--primary-white);
+}
+
+.spacing-12 {
+  margin-block: 0.75rem;
+}
+
+.br-sm {
+  border-radius: 0.625rem;
+}
+
+.br-lg {
+  border-radius: 1.25rem;
+}
+
+/* General Layout and Style */
+
+body {
+  display: grid;
+  place-items: center;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.card {
+  width: clamp(20.4375rem, 5.35vw + 19.18rem, 24rem);
+  height: clamp(31.3125rem, 1.97vw + 30.85rem, 32.625rem);
+  border-radius: 1.25rem;
+  border: 1px solid hsl(0, 0%, 0%);
+  box-shadow: 0.5rem 0.5rem hsl(0, 0%, 0%);
+  transition: all 0.4s ease;
+}
+
+.container {
+  margin: 1.5rem;
+}
+
+.image {
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.content {
+  margin-block: 1.5rem;
+}
+.learning {
+  display: grid;
+  place-items: center;
+
+  width: clamp(4.5625rem, 4.364rem + 0.845vw, 5.125rem);
+  height: clamp(1.625rem, 1.559rem + 0.282vw, 1.8125rem);
+  border-radius: 0.25rem;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+}
+.author {
+  font-size: 0.875rem;
+  padding-left: 0.75rem;
+}
+
+/* transitions */
+.card:hover {
+  box-shadow: 0.75rem 0.75rem hsl(0, 0%, 0%);
+}
+
+.card:hover h1 {
+  color: var(--primary-yellow);
+}

@@ -1,0 +1,200 @@
+@import url("href=https://fonts.googleapis.com/css2?family=Figtree:ital, wght@0, 300..900;1, 300..900&display=swap");
+
+:root {
+  --primary-yellow: hsl(47, 88%, 63%);
+  --primary-white: hsl(0, 0%, 100%);
+  --primary-gray-500: hsl(0, 0%, 42%);
+  --primary-gray-900: hsl(0, 0%, 7%);
+
+  --ff-primary: "Figtree", sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 800;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* general styling */
+
+body {
+  background-color: var(--primary-yellow);
+  color: var(--primary-gray-500);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  background-color: var(--primary-white);
+  max-width: 384px;
+  border: 1px solid var(--primary-gray-900);
+  border-radius: 1.25rem;
+  margin: 1.5rem;
+}
+
+.card-wrapper {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card-image {
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.card-text {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+/* component styling */
+
+.learning {
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--primary-yellow);
+  color: var(--primary-gray-900);
+  font-weight: var(--fw-bold);
+  border-radius: 0.25rem;
+}
+
+.date {
+  color: var(--primary-gray-900);
+}
+
+.title {
+  font-size: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
+  font-weight: var(--fw-bold);
+  color: var(--primary-gray-900);
+}
+
+.card-text > p {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+}
+
+.avatar {
+  height: 2rem;
+  width: 2rem;
+}
+
+.author {
+  font-weight: var(--fw-bold);
+  color: var(--primary-gray-900);
+  padding-left: 0.75rem;
+  font-size: 0.875;
+}
+
+.link {
+  margin: 1.5rem auto;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.title:hover,
+.title:focus-visible {
+  cursor: pointer;
+  color: var(--primary-yellow);
+}
+
+.card:has(.title:hover),
+.card:has(.title:focus-visible) {
+  box-shadow: 0.5rem 0.5rem var(--primary-gray-900);
+}
+
+@media (max-width: 400px) {
+  .card {
+    box-shadow: 0.5rem 0.5rem var(--primary-gray-900);
+  }
+}
